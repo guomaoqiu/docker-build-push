@@ -151,7 +151,7 @@ const push = (imageName, tags, buildOpts) => {
   }
 
   core.info(`Pushing tags ${tags} for Docker image ${imageName}...`);
-  cp.execSync(`docker push ${imageName} --all-tags`, cpOptions);
+  cp.execSync(`docker push ${imageName}:${tag}`, cpOptions);
 };
 
 module.exports = {
